@@ -1,0 +1,134 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">Purchase Credit</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-sm-6">
+                                            <div class="radio radio-primary mb-2">
+                                                <input type="radio" name="radio" id="radio1" value="option1" checked="">
+                                                <label for="radio1">
+                                                    Credit/Debit Card
+                                                </label>
+                                            </div>
+
+                                            <div class="radio radio-primary mb-2">
+                                                <input type="radio" name="radio" id="radio3" value="option3">
+                                                <label for="radio3">
+                                                    PayPal
+                                                </label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light waves-effect" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-warning waves-effect waves-light">Next</button>
+                                        </div>
+                                    </div>
+<!-- /.modal-content -->
+                                </div>
+<!-- /.modal-dialog -->
+                            </div>
+
+                <ol class="breadcrumb" style="margin-bottom: -10px;">
+                    <li class="breadcrumb-item"><a href="/admin/wallet">Wallet</a></li>
+                    <li class="breadcrumb-item active">Purchase Credit</li>
+                </ol>
+
+                <!-- start page title -->
+               <div class="text-center">
+                            <h3 class="mb-3">Stock up on Credits <i class="fa fa-diamond font-20"></i></h3>
+                            <p class="text-muted lead">Save money and get free bonus credits when you buy in bulk</p>
+                        </div>
+                <!-- end page title -->
+
+                <div class="container mt-5">
+                  <div class="row justify-content-md-center">
+                    <div class="col col-lg-3 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mt-3"><i class="fa fa-diamond"></i> 10 Credits</h3>
+                                <p class="card-text text-center mb-3">No Bonus</p>
+                                <h3 class="text-center mt-4">£10</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#myModal">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-sm-12">
+                      <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mt-3"><i class="fa fa-diamond"></i> 20 Credits</h3>
+                                <p class="card-text text-center mb-3">+ 2 Credit Bonus</p>
+                                <h3 class="text-center mt-4">£18</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#myModal">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-sm-12">
+                      <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mt-3"><i class="fa fa-diamond"></i> 50 Credits</h3>
+                                <p class="card-text text-center mb-3">+ 5 Credit Bonus</p>
+                                <h3 class="text-center mt-4">£45</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#myModal">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-sm-12">
+                      <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mt-3"><i class="fa fa-diamond"></i> 100 Credits</h3>
+                                <p class="card-text text-center mb-3">+ 10 Credit Bonus</p>
+                                <h3 class="text-center mt-4">£90</h3>
+                            </div>
+                            <div class="card-body text-center">
+                                <button class="btn btn-light" data-toggle="modal" data-target="#myModal">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+  
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>

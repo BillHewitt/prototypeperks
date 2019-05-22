@@ -1,0 +1,11 @@
+development:
+  clients:
+    default:
+      database: 'prototypedesing'
+      hosts:
+        - localhost:27017
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>

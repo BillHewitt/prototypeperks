@@ -1,0 +1,443 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Profile</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-lg-8 col-xl-8">
+
+                        <div class="card-box">
+                            <ul class="nav nav-tabs nav-bordered nav-justified">
+                                <li class="nav-item d-none d-lg-block">
+                                    <a href="#aboutme1" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                        Overview
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#aboutme" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                        Purchases
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#timeline" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Recognition
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Rewards
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="aboutme1">
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Your Stats</h5>
+
+                                    <div class="row">
+
+                                    <div class="col-md-6">
+                                        <a href="/admin/profile3" class="card p-3 outline">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="avatar-sm bg-danger rounded-circle">
+                                                        <i class="fe-award font-22 avatar-title text-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-right">
+                                                        <h3 class="text-dark my-1"><span data-plugin="counterup">3</span></h3>
+                                                        <p class="text-muted mb-1 text-truncate">Rewards</p>
+                                                    </div>
+                                                </div>
+                                              </div> <!-- end row-->
+                                            </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+                                    
+
+                                    <div class="col-md-6">
+                                        <a href="/admin/profile2" class="card p-3 outline">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="avatar-sm bg-info rounded-circle">
+                                                        <i class="mdi mdi-comment-account-outline font-22 avatar-title text-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-right">
+                                                        <h3 class="text-dark my-1"><span data-plugin="counterup">4</span></h3>
+                                                        <p class="text-muted mb-1 text-truncate">Recognition</p>
+                                                    </div>
+                                                </div>
+                                              </div> <!-- end row-->
+                                            </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+                                        <div class="col-md-6">
+                                            <a href="/admin/gifted" class="card p-3 mb-1 outline">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <div class="avatar-sm bg-pink rounded-circle">
+                                                            <i class="fe-gift font-22 avatar-title text-white"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="text-right">
+                                                            <h3 class="text-dark my-1"><span data-plugin="counterup">3</span></h3>
+                                                            <p class="text-muted mb-1 text-truncate">Gifted Items</p>
+                                                        </div>
+                                                    </div>
+                                                  </div> <!-- end row-->
+                                                </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+                                        <div class="col-md-6">
+                                        <a href="/admin/gifted" class="card p-3 mb-1 outline">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="avatar-sm bg-success rounded-circle">
+                                                        <i class="mdi mdi-star-outline font-22 avatar-title text-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-right">
+                                                        <h3 class="text-dark my-1"><span data-plugin="counterup">5</span></h3>
+                                                        <p class="text-muted mb-1 text-truncate">Company benefits</p>
+                                                    </div>
+                                                </div>
+                                              </div> <!-- end row-->
+                                            </a> <!-- end widget-rounded-circle-->
+                                        </div> <!-- end col-->
+
+
+
+                                    </div>
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Your Activity</h5>
+
+                                    <ul class="list-unstyled timeline-sm">
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">1 Day Ago</span>
+                                            <h5 class="mt-0 mb-1">You submitted feedback to Paul Schulz</h5>
+                                            <p class="text-muted mt-2">It would be good if we could start having a bit of music in the office.</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">2 Days Ago</span>
+                                            <h5 class="mt-0 mb-1">You recognised Dan Taylor</h5>
+                                            <p class="text-muted mt-2">Great job with the roles & permissions.</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">4 Days Ago</span>
+                                            <h5 class="mt-0 mb-1">You purchased <a href="/admin/profile1"> Asos gift Card</a></h5>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">6 Days Ago</span>
+                                           <h5 class="mt-0 mb-1">You received a <a href="/admin/profile2"> shoutout</a> from Paul Schulz</h5>
+                                            <p class="text-muted mt-2">Great job the other day on the presentation. Really awesome.</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">10 Days Ago</span>
+                                           <h5 class="mt-0 mb-1">You received <a href="/admin/gifted"> 10:30 starts</a> from Paul Schulz</h5>
+                                            <p class="text-muted mt-2">We can see that the mood is pretty low right now. Go and enjoy an extra day to recharge.</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">14 Days Ago</span>
+                                            <h5 class="mt-0 mb-1">You downloaded <a href="/admin/profile1"> Apple discount code</a></h5>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">15 Days Ago</span>
+                                            <h5 class="mt-0 mb-1">You liked <a href="/admin/hub"> product team action</a></h5>
+                                        </li>
+                                    </ul>
+
+                                    
+
+                                </div> <!-- end tab-pane -->
+                                <!-- end about me section content -->
+
+                                <div class="tab-pane show active" id="aboutme">
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Purchases</h5>
+
+                                    <div class="row">
+                                        <div class="col-md-6 col-xl-3">
+                                            <a href="#">
+                                              <img src="/template-assets/images/products/medical.jpg" alt="Oculus Go" class="img-fluid rounded border">
+                                              <h5 class="font-15 mt-3 sp-line-1">Perkbox Medical</h5>
+                                              <p class="m-0"> <span class="text-muted"> 1 Year Licence</span></p>
+                                            </a>
+                                        </div> <!-- end col-->
+
+                                        <div class="col-md-6 col-xl-3">
+                                            <a href="#">
+                                              <img src="/template-assets/images/products/asos.jpg" alt="Oculus Go" class="img-fluid rounded border">
+                                              <h5 class="font-15 mt-3 sp-line-1">Asos</h5>
+                                              <p class="m-0"> <span class="text-muted"> £50 Giftcard</span></p>
+                                            </a>
+                                        </div> <!-- end col-->
+
+                                    </div>
+
+
+                                    <h5 class="mb-3 mt-4 text-uppercase">
+                                        Redemptions</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
+                                                    <th>Code</th>
+                                                    <th>Status</th>
+                                                    <th>Mark as used</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Apple Discount Code</td>
+                                                    <td>01/05/2019</td>
+                                                    <td>134135738</td>
+                                                    <td><span class="badge badge-primary">Unused</span></td>
+                                                    <td><input type="checkbox" data-plugin="switchery" data-color="#0496ff" data-size="small"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cafe Nero Gift Code</td>
+                                                    <td>30/04/2019</td>
+                                                    <td>3578359584</td>
+                                                    <td><span class="badge badge-secondary">Used</span></td>
+                                                   <td><input type="checkbox" checked data-plugin="switchery" data-color="#0496ff" data-size="small"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PC World Discount Code</td>
+                                                    <td>30/03/2019</td>
+                                                    <td>13513-135-35</td>
+                                                    <td><span class="badge badge-secondary">Used</span></td>
+                                                    <td><input type="checkbox" checked data-plugin="switchery" data-color="#0496ff" data-size="small"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Currys Discount Code</td>
+                                                    <td>30/02/2019</td>
+                                                    <td>135353113</td>
+                                                    <td><span class="badge badge-secondary">Expired</span></td>
+                                                    <td><input type="checkbox" checked data-plugin="switchery" data-color="#0496ff" data-size="small"></td>
+                                                </tr>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div> <!-- end tab-pane -->
+                                <!-- end about me section content -->
+
+                                <div class="tab-pane" id="timeline">
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Recognition</h5>
+
+                                    <ul class="list-unstyled timeline-sm">
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">6 Days Ago</span>
+                                           <div class="media">
+                                            <img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/elsa.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="m-0 mb-1">Recognition from Elsa Bacchiolelli</h5>
+                                                <span class="badge badge-light badge-pill">Above & Beyond</span>
+                                            </div>
+                                        </div>
+                                            <p class="text-muted mt-2">Great job the other day on the presentation. Really awesome. Glad to be part of your team!</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">10 Days Ago</span>
+                                          <div class="media">
+                                            <img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/paul.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="m-0 mb-1">Shoutout from Paul Schulz</h5>
+                                                <span class="badge badge-light badge-pill">Zero Fear</span>
+                                            </div>
+                                        </div>
+                                                <p class="text-muted mt-2">I once saw you look at fear. Fear itself shuddered. Really impressive stuff</p>
+                                        </li>
+                                        <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">14 Days Ago</span>
+                                          <div class="media">
+                                            <img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/steve.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="m-0 mb-1">Recognition from Steve Etheridge</h5>
+                                                <span class="badge badge-light badge-pill">Above & Beyond</span>
+                                            </div>
+                                        </div>
+                                                <p class="text-muted mt-2">Well done Billiam. Been a pleasure working on the platform play together.</p>
+                                        </li>
+
+                                         <li class="timeline-sm-item">
+                                            <span class="timeline-sm-date">14 Days Ago</span>
+                                          <div class="media">
+                                            <img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/maddie.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="m-0 mb-1">Recognition from Maddie Pozlevic</h5>
+                                                <span class="badge badge-light badge-pill">We're a family</span>
+                                            </div>
+                                        </div>
+                                                <p class="text-muted mt-2">Thanks for helping out at the event the other day, really appreciate it!</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- end timeline content-->
+
+                                <div class="tab-pane" id="settings">
+                                    <form>
+                                        <h5 class="mb-4 text-uppercase">
+                                        </i> Rewards</h5>
+                                        <div class="row">
+                                        <div class="col-sm-6 col-lg-6 mb-4" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/asosr">
+                                              <img src="/template-assets/images/products/asos.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <div class="media mt-3">
+                                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/users/paul.jpg" alt="Generic placeholder image">
+                                                  <div class="media-body">
+                                                      <h5 class="m-0">£50 Asos Giftcard</h5>
+                                                      <p class="mt-1 text-muted small"><i class="fe-award"></i> Rewarded by Paul Schulz</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                          </div>
+
+                                        <div class="col-sm-6 col-lg-6 mb-6" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/creditr">
+                                              <img src="/template-assets/images/products/50credits.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <div class="media mt-3">
+                                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/users/paul.jpg" alt="Generic placeholder image">
+                                                  <div class="media-body">
+                                                      <h5 class="m-0">50 Credits</h5>
+                                                      <p class="mt-1 text-muted small"><i class="fe-award"></i> Rewarded by Paul Schulz</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-6 col-lg-6 mb-6" data-isotope-item="" data-category="Branding">
+                                            <a href="#">
+                                              <img src="/template-assets/images/products/apple.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <div class="media mt-3">
+                                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/users/louise.jpg" alt="Generic placeholder image">
+                                                  <div class="media-body">
+                                                      <h5 class="m-0">£30 Apple Giftcared</h5>
+                                                      <p class="mt-1 text-muted small"><i class="fe-award"></i>Rewarded by Louise Jones</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                          </div>
+
+                                        </div>
+                                    </form>
+
+                                    <h5 class="mb-4 mt-4 text-uppercase">
+                                        Incentives</h5>
+
+                                        <div class="row">
+                                            
+                                           <div class="col-sm-6 col-lg-6 mb-6" data-isotope-item="" data-category="Branding">
+                                            <a href="#">
+                                              <img src="/template-assets/images/products/teamlunch.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <div class="media mt-3">
+                                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/users/paul.jpg" alt="Generic placeholder image">
+                                                  <div class="media-body">
+                                                      <h5 class="m-0">Team Lunch</h5>
+                                                      <p class="mt-1 text-muted small"><i class="fe-lock"></i> Incentive from Paul Schulz</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                          </div>
+
+                                        </div>
+                                        
+
+                                </div>
+                                <!-- end settings content-->
+
+                            </div> <!-- end tab-content -->
+                        </div> <!-- end card-box-->
+
+                    </div>
+
+
+                    <div class="col-lg-4 col-xl-4">
+
+                        <div class="card-container manual-flip card-box text-center d-none d-lg-block">
+                            <div class="card">
+                                <div class="front">
+                                    
+                                    <img src="/template-assets/images/users/bill.jpg" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
+
+                                    <h4 class="mb-2">Bill Hewitt</h4>
+
+                                    <a href="/admin/wallet" class="mt-0"><i class="fa fa-diamond" aria-hidden="true"></i> 300 Credits</a>
+
+                                    <ul class="social-list list-inline mt-3 mb-0">
+                                        <a href="/admin/profileedit" class="btn btn-light">Edit Details</a>
+                                    </ul>
+
+                                </div> <!-- end front panel -->
+                            </div>
+                        </div>
+
+                        <div class="card-box text-center d-none d-lg-block">
+                            <h4 class="mb-0">Awards</h4>
+
+
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <p class="text-muted mt-4">You've not received any team or company awards yet</p>
+                                </div>
+                            </div>
+                        </div> <!-- end card-box -->
+
+                    </div>
+                </div>
+
+               
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+  
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>

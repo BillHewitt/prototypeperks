@@ -1,0 +1,528 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-8">
+                        <div class="page-title-box">
+                            <h4 class="page-title mb-0">Welcome to Perkbox, Bill</h4>
+                            <p class="mb-4">You have <i class="fa fa-diamond" aria-hidden="true"></i> 300 Credits to use in the <a href="/admin/collections">Collections</a>.</p>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-lg-8 col-xl-8">
+
+                        
+
+
+                        <div class="card-box" style="min-height: 100px;">
+                            <h4 class="mb-4">Welcome video</h4>
+                            <div class="row">
+
+                                 <div class="col-md-12" >
+                                    <iframe width="680" class="" height="315" src="https://www.youtube.com/embed/HPzpCZBogwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div> <!-- end col-->
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-box mb-5">
+                            <h4 class="mb-4">Based on your interests</h4>
+
+                            <div class="row">
+                                        <div class="col-sm-12 col-lg-4 mb-2" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/adidas">
+                                              <img src="/template-assets/images/products/adidas.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Adidas <span class="discount float-right small">2% Off</span></h4>
+                                              <p class="small text-muted">Discount code</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-12 col-lg-4 mb-4" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/apple">
+                                              <img src="/template-assets/images/products/apple.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Apple <span class="discount float-right small">5% Off</span></h4>
+                                              <p class="small text-muted">Discount code</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-12 col-lg-4 mb-4" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/netflix">
+                                              <img src="/template-assets/images/products/netflix.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Netflix <span class="discount float-right small">3% Off</span></h4>
+                                              <p class="small text-muted">Discount code</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-12 col-lg-4 mb-2" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/tesco">
+                                              <img src="/template-assets/images/products/tesco.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Tesco <span class="discount float-right small">5% Off</span></h4>
+                                              <p class="small text-muted">From £10</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-12 col-lg-4 mb-2" data-isotope-item="" data-category="Branding">
+                                            <a href="/admin/asos">
+                                              <img src="/template-assets/images/products/asos.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Asos <span class="discount float-right small">4% Off</span></h4>
+                                              <p class="small text-muted">From £30</p>
+                                            </a>
+                                          </div>
+
+                                          <div class="col-sm-12 col-lg-4 mb-2" data-isotope-item="" data-category="Branding">
+                                            <a href="#">
+                                              <img src="/template-assets/images/products/youtube.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0 border">
+                                              <h4 class="mt-3">Youtube <span class="discount float-right small">5% Off</span></h4>
+                                              <p class="small text-muted">Discount code</p>
+                                            </a>
+                                          </div>
+                                        </div>
+
+                        </div>
+
+                        
+
+
+                                    
+
+
+
+                        </div>
+
+
+                    <div class="col-xl-4">
+
+                       <div class="card-box">
+                            <h4 class="mb-4">Onboarding tasks</h4>
+                            <div class="todoapp">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 id="todo-message">
+<span id="todo-remaining"></span> of <span id="todo-total"></span> remaining</h5>
+                                    </div>
+                                </div>
+
+                                <ul class="list-group list-group-flush slimscroll todo-list" style="max-height: 200px" id="todo-list"></ul>
+
+                                
+                            </div> <!-- .todoapp -->
+                        </div> <!-- end card-box-->
+
+
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <button type="button" class="close mt-0" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="mb-4 text-center text-uppercase"> Have your say</h4>
+
+                                                <form>
+                                                    <div id="basicwizard">
+
+                                                        <ul class="nav nav-tabs nav-bordered nav-justified form-wizard-header mb-2">
+                                                            <li class="nav-item">
+                                                                <a href="#basictab1" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 active"> 
+                                                                    <span class="d-none d-sm-inline">Step 1</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 2</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab3" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 3</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content b-0 mb-0">
+                                                            <div class="tab-pane active" id="basictab1">
+                                                                <h4 class="mt-2 mb-4 text-center">What type of feedback would you like to give?</h4>
+                                                                
+                                                                <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h4 class="text-dark my-1">Open text</h4>
+                                                                                    <p class="text-muted mb-1">Let us know your open feedback</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col-->
+
+                                                                
+
+                                                                <div class="col-md-6">
+                                                                    <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h4 class="text-dark my-1">Pulse survey</h4>
+                                                                                    <p class="text-muted mb-1">5 quick questions about your experience</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col-->
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab2">
+                                                                <h4 class="mt-2 mb-4 text-center">What's your feedback?</h4>
+                                                                <div class="row mt-0">
+                                                                    <div class="col-12">
+                                                                        <textarea id="" class="form-control" rows="4" placeholder="Your feedback has a limit of 400 characters."></textarea>
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+
+                                                                <ul class="list-inline wizard mt-2 mb-0">
+                                                                    <li class="previous list-inline-item disabled">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Previous</a>
+                                                                    </li>
+                                                                    <li class="next list-inline-item float-right">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Next</a>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab3">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center">
+                                                                            <h4 class="mt-2 mb-4 text-center">Here's your summary</h4>
+
+                                                                            <p class="w-75 mb-4 mx-auto"><i>"I sometimes find it pretty hard to concentrate in the office with all the noise. If we could have more quiet spaces that would be ace."</i></p>
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center">
+
+                                                                            <div class="mb-3">
+                                                                                <div class="custom-control custom-checkbox">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                                    <label class="custom-control-label" for="customCheck1"><img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/avatar.png" alt="Generic placeholder image"> Send feedback anonymously</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox mt-2">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                                    <label class="custom-control-label" for="customCheck2"><img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/paul.jpg" alt="Generic placeholder image"> Send feedback to my line manager</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox mt-2">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                                    <label class="custom-control-label" for="customCheck3"><img class="mr-2 avatar-sm rounded-circle" src="/template-assets/images/users/louise.jpg" alt="Generic placeholder image"> Send feedback to my HR manager</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center">
+                                                                            <button type="button" class="btn btn-warning text-center" disabled>
+                                                                              Submit feedback
+                                                                            </button>
+                                                                        </div>
+
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+                                                            </div>
+
+                                                        </div> <!-- tab-content -->
+                                                    </div> <!-- end #basicwizard-->
+                                                </form>
+
+                                            </div> <!-- end card-body -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <button type="button" class="close mt-0" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="mb-4 text-center "> Recognise a colleague</h4>
+
+                                                <form>
+                                                    <div id="basicwizard">
+
+                                                        <ul class="nav nav-tabs nav-bordered nav-justified form-wizard-header mb-2">
+                                                            <li class="nav-item">
+                                                                <a href="#basictab4" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 active"> 
+                                                                    <span class="d-none d-sm-inline">Step 1</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab5" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 2</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#basictab6" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
+                                                                    <span class="d-none d-sm-inline">Step 3</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content b-0 mb-0">
+                                                            <div class="tab-pane active" id="basictab4">
+                                                                <h4 class="mt-2 mb-4 text-center">Who would you like to recognise and why?</h4>
+
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <form>
+
+
+
+                                                                            <div class="form-group mb-3">
+                                                                                <label for="simpleinput">Which person?</label>
+
+                                                                                <input type="text" id="simpleinput" class="form-control" placeholder="Start typing the name of the person">
+                                                                            </div>
+
+
+                                                                            <div class="form-group mb-3">
+                                                                                <label for="example-textarea">What for?</label>
+                                                                                <textarea class="form-control" id="example-textarea" rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group mb-3">
+                                                                                <label for="example-select">What company value are they embodying?</label>
+                                                                                <select class="form-control" id="example-select">
+                                                                                    <option>Value 1</option>
+                                                                                    <option>Value 2</option>
+                                                                                    <option>Value 3</option>
+                                                                                    <option>value 4</option>
+                                                                                    <option>Value 5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </form>
+                                                                        <ul class="list-inline wizard mt-2 mb-0">
+                                                                    <li class="previous list-inline-item disabled">
+                                                                       
+                                                                    </li>
+                                                                    <li class="next list-inline-item float-right">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Next</a>
+                                                                    </li>
+                                                                </ul>
+                                                                    </div> <!-- end col -->
+                                                                </div>
+                                                                
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab5">
+                                                                <h4 class="mt-2 mb-4 text-center">Would you like to include a gift?</h4>
+                                                                <div class="row mt-0">
+                                                                    <div class="col-4">
+                                                                        <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="text-dark my-1">Create<br></h5>
+                                                                                    <p class="text-muted mb-1 small">Unique gift from scratch</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                    <div class="col-4">
+                                                                       <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="text-dark my-1">
+                                                                                    Credit</h5>
+                                                                                    <p class="text-muted mb-1 small">Purchase or send credit</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                    <div class="col-4">
+                                                                        <a href="#" class="card p-3 outline">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="text-dark my-1">Collections</h5>
+                                                                                    <p class="text-muted mb-1 small">Choose from collections</p>
+                                                                                </div>
+                                                                            </div>
+                                                                          </div> <!-- end row-->
+                                                                        </a> <!-- end widget-rounded-circle-->
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+                                                                <ul class="list-inline wizard mt-2 mb-0">
+                                                                    <li class="previous list-inline-item disabled">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Previous</a>
+                                                                    </li>
+                                                                    <li class="next list-inline-item float-right">
+                                                                        <a href="javascript: void(0);" class="btn btn-light">Skip</a>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </div>
+
+                                                            <div class="tab-pane" id="basictab6">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="text-center">
+                                                                           <h4 class="mt-2 mb-4 text-center">Here's your summary</h4>
+
+
+                                                                            <p class="w-75 mb-4 mx-auto"><i>"Great job with the presentation the other day. You rocked!"</i></p>
+
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center">
+
+                                                                           
+                                                                                <div class="col-sm-6">
+                                            <div class="radio radio-primary mb-2">
+                                                <input type="radio" name="radio" id="radio1" value="option1" checked="">
+                                                <label for="radio1">
+                                                    Send recognition privately
+                                                </label>
+                                            </div>
+
+                                            <div class="radio radio-primary mb-2">
+                                                <input type="radio" name="radio" id="radio3" value="option3">
+                                                <label for="radio3">
+                                                    Send privately and notify their manager
+                                                </label>
+                                            </div>
+                                            
+
+                                        </div> 
+
+                                                                       
+                                                                        </div>
+
+                                                                        <div class="row justify-content-md-center mt-2">
+                                                                            <button type="button" class="btn btn-warning text-center">
+                                                                              Submit recognition
+                                                                            </button>
+                                                                        </div>
+
+                                                                    </div> <!-- end col -->
+                                                                </div> <!-- end row -->
+                                                            </div>
+
+                                                        </div> <!-- tab-content -->
+                                                    </div> <!-- end #basicwizard-->
+                                                </form>
+
+                                            </div> <!-- end card-body -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                      
+<!-- /.modal-content -->
+                        
+<!-- /.modal-dialog -->
+    
+
+
+                            <div class="card-box">
+                                <h4 class="">Have your say</h4>
+                                <p class="mt-3">Give us your feedback and help create the culture you're proud to be part of</p>
+                                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                      Give feedback
+                                    </button>
+                            </div>
+
+                            <br>
+
+                            <div class="card-box">
+                                <h4 class="">Recognise a colleague</h4>
+                                <p class="mt-3">Time to make a colleague's day!</p>
+                                <div class="avatar-group mb-2">
+                                    <a href="javascript: void(0);" class="avatar-group-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Elsa Bacchiolelli">
+                                        <img src="/template-assets/images/users/elsa.jpg" class="rounded-circle avatar-sm" alt="friend">
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="avatar-group-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steve Etheridge">
+                                        <img src="/template-assets/images/users/steve.jpg" class="rounded-circle avatar-sm" alt="friend">
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="avatar-group-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Paul Schulz">
+                                        <img src="/template-assets/images/users/paul.jpg" class="rounded-circle avatar-sm" alt="friend">
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="avatar-group-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Maddie Pozlevic">
+                                        <img src="/template-assets/images/users/maddie.jpg" class="rounded-circle avatar-sm" alt="friend">
+                                    </a>
+                                </div>
+                                      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg1">
+                                      Recognise someone
+                                    </button>
+                            </div>
+
+                        </div>
+                            
+
+
+                        
+
+                    </div>
+                </div>
+
+               
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("mdi mdi-heart");
+}
+</script>
+
+<%= javascript_include_tag 'admin/libs/chart-js/Chart.bundle.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/moment/moment.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-scrollto/jquery.scrollTo.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/sweetalert2/sweetalert2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/jquery.chat.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/jquery.todo.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/dashboard-3.init.js', 'data-turbolinks-track': 'reload' %>
+
+<%= javascript_include_tag 'admin/libs/tippy-js/tippy.all.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>

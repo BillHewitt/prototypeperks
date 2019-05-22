@@ -1,0 +1,591 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+  <div class="container">
+    <ol class="breadcrumb" style="margin-bottom: -10px;">
+        <li class="breadcrumb-item"><a href="/admin/collections">Collections</a></li>
+        <li class="breadcrumb-item"><a href="/admin/health">Health & Support</a></li>
+        <li class="breadcrumb-item active">Separate offers</li>
+    </ol>
+    <%- if role?(:manager) %>
+      <h1>
+        Manager Role
+      </h1>
+    <% elsif role?(:employee) %>
+      <h1>
+        Employee Role
+      </h1>
+    <% end %>
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-8">
+            <div class="page-title-box">
+                <h4 class="page-title mb-2 mt-2">Health & Support</h4>
+            </div>
+        </div>
+    </div>     
+    <!-- end page title --> 
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="">
+                <ul class="nav nav-tabs nav-bordered everyday">
+                    <li class="nav-item">
+                        <a href="#aboutme1" data-toggle="tab" aria-expanded="true" class="nav-link everyday active">
+                            See All
+                        </a>
+                    </li>
+                      <li class="nav-item">
+                        <a href="#aboutme" data-toggle="tab" aria-expanded="false" class="nav-link everyday">
+                            Health promotion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#timeline" data-toggle="tab" aria-expanded="false" class="nav-link everyday">
+                            Employee support
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link everyday">
+                            Insurance
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="aboutme1">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Categories <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Category 1</a>
+                                        <a class="dropdown-item" href="#">Category 2</a>
+                                        <a class="dropdown-item" href="#">Category 3</a>
+                                        <a class="dropdown-item" href="#">Category 4</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Value <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Add range slider</a>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group mb-3 float-right">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recommended <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Nearest</a>
+                                        <a class="dropdown-item" href="#">Recently Added</a>
+                                        <a class="dropdown-item" href="#">From A-Z</a>
+                                        <a class="dropdown-item" href="#">Highest % Discount</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row hover-card-items">
+
+                            <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Debt Management <span class="discount float-right small">2% Off</span></h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="/admin/medical">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                      <h4 class="m-0">Perkbox Medical </h4>
+                                      <p class="mt-1 text-muted small">Company Benefit </p>
+                                  </div>
+                              </div>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Financial advice <span class="discount float-right small">3% Off</span></h4>
+                                  <p class="small text-muted">from £15</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                      <h4 class="m-0">EAP </h4>
+                                      <p class="mt-1 text-muted small">Company Benefit </p>
+                                  </div>
+                              </div>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Dental Cashplan</h4>
+                                  <p class="small text-muted">from £12/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Private medical insurance</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Health cashplan</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Health insurance</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Critical illness insurance</h4>
+                                  <p class="small text-muted">from £20/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                    <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                    <div class="media-body">
+                                        <h4 class="m-0">Mental health </h4>
+                                        <p class="mt-1 text-muted small">Company Benefit </p>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Physiotherapy</h4>
+                                  <p class="small text-muted">from £20</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Councelling online</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                            </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="pagination pagination-rounded justify-content-end mb-5">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:%20void(0);" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:%20void(0);">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:%20void(0);" aria-label="Next">
+                                            <span aria-hidden="true">»</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+
+                            
+                        
+
+                        
+
+                    </div> <!-- end tab-pane -->
+                    <!-- end about me section content -->
+
+                    <div class="tab-pane" id="aboutme">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Categories <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Category 1</a>
+                                        <a class="dropdown-item" href="#">Category 2</a>
+                                        <a class="dropdown-item" href="#">Category 3</a>
+                                        <a class="dropdown-item" href="#">Category 4</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Value <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Add range slider</a>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group mb-3 float-right">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recommended <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Nearest</a>
+                                        <a class="dropdown-item" href="#">Recently Added</a>
+                                        <a class="dropdown-item" href="#">From A-Z</a>
+                                        <a class="dropdown-item" href="#">Highest % Discount</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            
+
+                             
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                      <h4 class="m-0">EAP </h4>
+                                      <p class="mt-1 text-muted small">Company Benefit </p>
+                                  </div>
+                              </div>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Smoking prevention</h4>
+                                  <p class="small text-muted">from £5/month</p>
+                                </a>
+                              </div>
+
+                               <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="/admin/medical">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                      <h4 class="m-0">Perkbox Medical </h4>
+                                      <p class="mt-1 text-muted small">Company Benefit </p>
+                                  </div>
+                              </div>
+                                </a>
+                              </div>
+
+                              
+
+                              
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                    <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                    <div class="media-body">
+                                        <h4 class="m-0">Mental health </h4>
+                                        <p class="mt-1 text-muted small">Company Benefit </p>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Physiotherapy</h4>
+                                  <p class="small text-muted">from £20</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Councelling online</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                            </div>
+
+                            <div class="row">
+                            <div class="col-12">
+                                <ul class="pagination pagination-rounded justify-content-end mb-5">
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:%20void(0);" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:%20void(0);">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:%20void(0);">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:%20void(0);" aria-label="Next">
+                                            <span aria-hidden="true">»</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+
+                        
+                    </div> <!-- end tab-pane -->
+                    <!-- end about me section content -->
+
+                    <div class="tab-pane" id="timeline">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Categories <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Category 1</a>
+                                        <a class="dropdown-item" href="#">Category 2</a>
+                                        <a class="dropdown-item" href="#">Category 3</a>
+                                        <a class="dropdown-item" href="#">Category 4</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Value <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Add range slider</a>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group mb-3 float-right">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recommended <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Nearest</a>
+                                        <a class="dropdown-item" href="#">Recently Added</a>
+                                        <a class="dropdown-item" href="#">From A-Z</a>
+                                        <a class="dropdown-item" href="#">Highest % Discount</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row pb-4">
+                            <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Debt Management <span class="discount float-right small">2% Off</span></h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Financial advice <span class="discount float-right small">3% Off</span></h4>
+                                  <p class="small text-muted">from £15</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <div class="media mt-3">
+                                  <img class="mr-2 avatar-xs rounded-circle" src="/template-assets/images/perkboxlogo.png" alt="Generic placeholder image">
+                                  <div class="media-body">
+                                      <h4 class="m-0">EAP </h4>
+                                      <p class="mt-1 text-muted small">Company Benefit </p>
+                                  </div>
+                              </div>
+                                </a>
+                              </div>
+
+
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Councelling online</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+                            </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="settings">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Categories <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Category 1</a>
+                                        <a class="dropdown-item" href="#">Category 2</a>
+                                        <a class="dropdown-item" href="#">Category 3</a>
+                                        <a class="dropdown-item" href="#">Category 4</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="btn-group mb-3">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Value <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Add range slider</a>
+                                    </div>
+                                </div>
+
+                                <div class="btn-group mb-3 float-right">
+                                    <button type="button" class="btn btn-light dropdown-toggle btn-sm float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recommended <i class="mdi mdi-chevron-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Nearest</a>
+                                        <a class="dropdown-item" href="#">Recently Added</a>
+                                        <a class="dropdown-item" href="#">From A-Z</a>
+                                        <a class="dropdown-item" href="#">Highest % Discount</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                                <div class="row">
+
+
+
+                              
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Dental Cashplan</h4>
+                                  <p class="small text-muted">from £12/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Private medical insurance</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Health cashplan</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Health insurance</h4>
+                                  <p class="small text-muted">from £10/month</p>
+                                </a>
+                              </div>
+
+                              <div class="col-sm-6 col-lg-3 mb-4" data-isotope-item="" data-category="Branding">
+                                <a href="#">
+                                  <img src="/template-assets/images/products/placeholder.jpg" alt="Volkswagen Australia" class="img-fluid rounded mb-0">
+                                  <h4 class="mt-3">Critical illness insurance</h4>
+                                  <p class="small text-muted">from £20/month</p>
+                                </a>
+                              </div>
+
+                              
+                                    
+
+                                   
+                                </div>
+
+                    </div>
+
+
+
+                </div> <!-- end tab-content -->
+            </div>
+    </div>     
+    <!-- end page title --> 
+      
+  </div> <!-- end container -->
+</div>
+<%- content_for :footer_js do %>
+
+
+  
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+
+<% end %>

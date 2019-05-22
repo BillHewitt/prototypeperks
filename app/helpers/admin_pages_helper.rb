@@ -1,0 +1,3 @@
+module AdminPagesHelper
+  
+end

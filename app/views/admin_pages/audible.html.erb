@@ -1,0 +1,160 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <ol class="breadcrumb" style="margin-bottom: -10px;">
+                    <li class="breadcrumb-item"><a href="/admin/collections">Collections</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/learning">Learning & Development</a></li>
+                    <li class="breadcrumb-item active">Audible</li>
+                </ol>
+               
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-xl-8">
+
+                                    <div class="tab-content pt-0">
+                                        <div class="tab-pane active show" id="product-1-item">
+                                            <img src="/template-assets/images/products/audible.jpg" alt="" class="img-fluid mx-auto d-block rounded border">
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div id="accordion" class="mb-3">
+                                        <div class="card mb-1">
+                                            <div class="card-header" id="headingOne" style="background-color: #fff" ;="">
+                                                <h5 class="m-0">
+                                                    <a class="text-dark collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
+                                                        Details <i class="mdi mdi-chevron-down float-right"></i>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                                                <div class="card-body">
+                                                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-1">
+                                            <div class="card-header" id="headingTwo" style="background-color: #fff" ;="">
+                                                <h5 class="m-0">
+                                                    <a class="text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
+                                                        FAQ <i class="mdi mdi-chevron-down float-right"></i>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-1">
+                                            <div class="card-header" id="headingTwo" style="background-color: #fff" ;="">
+                                                <h5 class="m-0">
+                                                    <a class="text-dark" data-toggle="collapse" href="#collapseTwo1" aria-expanded="false">
+                                                        Terms & Conditions <i class="mdi mdi-chevron-down float-right"></i>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div> <!-- end col -->
+                                <div class="col-xl-4">
+                                    <div class="pl-xl-3 mt-3 mt-xl-0">
+                                        <h3 class="mb-1">Audible</h3>
+                                        <span class="badge badge-light badge-pill lg">Online</span>
+                                        <span class="badge badge-light badge-pill lg">Gift card</span>
+
+                                        
+                                        <p class="text-muted mb-2 mt-4">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought.</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-xl-6 col-lg-6">
+                                              <p class="mt-1">£10 Gift Card</p>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6">   
+                                              <div class="form-group mb-3">
+                                                <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected"><span class="input-group-btn input-group-prepend"><button class="btn btn-outline-secondary bootstrap-touchspin-down" type="button">-</button></span><input data-toggle="touchspin" type="text" value="1" class="form-control text-center"><span class="input-group-btn input-group-append"><button class="btn btn-outline-secondary bootstrap-touchspin-up" type="button">+</button></span></div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row pt-0">
+                                            <div class="col-xl-6 col-lg-6">
+                                              <p class="mt-1">£20 Gift Card</p>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6">   
+                                              <div class="form-group mb-3">
+                                                <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected"><span class="input-group-btn input-group-prepend"><button class="btn btn-outline-secondary bootstrap-touchspin-down" type="button">-</button></span><input data-toggle="touchspin" type="text" value="" class="form-control text-center"><span class="input-group-btn input-group-append"><button class="btn btn-outline-secondary bootstrap-touchspin-up" type="button">+</button></span></div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12col-xl-12">
+                                            <div class="border border-light p-2 mb-3" style="border-radius: 0.5rem;">
+                                                <p><strong>Perkbox Credit available</strong> <span class="float-right"><i class="fa fa-diamond" aria-hidden="true"></i> 100</span></p>
+
+                                                <p class="small">Save and get free bonus credits when you <a href="/admin/credit">buy in bulk</a></p>
+                                        
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12col-xl-12">
+                                            <div class="border border-light p-2 mb-3" style="border-radius: 0.5rem;">
+                                                <p>Subtotal <span class="float-right">£10</span></p>
+                                                <p>Credits <span class="float-right"><a href="#"> <i class="fe-x text-muted"></i></a> 10 </span></p>
+                                                <p><strong>Total</strong> <span class="float-right">0</span></p>
+
+                                                <button type="button" class="btn btn-warning btn-block">Purchase gift card</button>
+                                        
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                
+                                        </div>
+                                    </div>
+                                </div> <!-- end col -->
+                            </div>
+                            <!-- end row -->
+
+
+                            
+                            </div>
+
+                        </div> <!-- end card-->
+                    </div> <!-- end col-->
+                </div>
+                <!-- end row-->
+                
+            </div> <!-- end container -->
+        </div><%- content_for :footer_js do %>
+  
+<% end %>

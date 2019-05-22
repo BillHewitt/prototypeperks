@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perkbox Prototype</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= yield :head_css %>
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% if current_pages?(%w(login1 login2 login3 login4)) %>
+
+    <% else %>
+
+      <%= render 'layouts/navigation' %>
+
+    <% end %>
+
+    <%= yield %>
+
+    <div class="rightbar-overlay"></div>
+
+    <% if current_pages?(%w(login1 login2 login3 login4)) %>
+
+    <% else %>
+
+    <%= render 'layouts/admin/footer' %>
+    <%= render 'layouts/admin/right_sidebar'%>
+
+    <% end %>
+    
+    <%= javascript_include_tag 'admin/vendor.js', 'data-turbolinks-track': 'reload' %>
+    <%= yield :footer_js %>
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>

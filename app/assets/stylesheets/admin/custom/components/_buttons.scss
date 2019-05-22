@@ -1,0 +1,140 @@
+// 
+// buttons.scss
+//
+
+.btn {
+    color: $white;
+
+    .mdi {
+        &:before {
+            margin-top: -1px;
+        }
+    }
+}
+
+.btn-warning {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-radius: 0.6rem;
+    color: #343a40;
+    box-shadow: rgba(59, 59, 54, 0.12) 0px 2px 8px 0px;
+}
+
+.btn-warning:hover {
+    color: #343a40;
+    background-color: #faca44;
+    border-color: #faca44;
+}
+
+
+.btn-rounded {
+    border-radius: 2em;
+}
+
+.btn-white {
+    color: $gray-900;
+    background-color: #fff;
+}
+
+.btn-white:hover {
+    background-color: #f8f8f8;
+    outline: 0;
+}
+
+.btn-white:focus {
+    background-color: #f8f8f8;
+    border-color: #faca44;
+}
+
+//
+// light button
+// 
+.btn-light {
+    color: $gray-900;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    box-shadow: rgba(59, 59, 54, 0.12) 0px 2px 8px 0px;
+}
+
+.btn-light:hover {
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+}
+
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+    color: $gray-900;
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+}
+
+//
+// Link buttons
+//
+// Make a button look and behave like a link
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $link-color;
+    background-color: transparent;
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    &:focus,
+    &.focus {
+        text-decoration: $link-hover-decoration;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    } // No need for an active state here
+}
+
+.btn-link.heart {
+    margin-top: 5px;
+}
+
+
+//
+// Alternate buttons
+//
+@each $color,
+$value in $theme-colors {
+    .btn-outline-#{$color} {
+        @include button-outline-variant($value);
+    }
+}
+
+// 
+// Button labels
+//
+
+.btn-label {
+    margin: -.55rem .9rem -.55rem -.9rem;
+    padding: .6rem .9rem;
+    background-color: rgba($gray-900,0.1);
+}
+
+.btn-label-right {
+    margin: (-$btn-padding-y) (-$btn-padding-x) (-$btn-padding-y) ($btn-padding-x);
+    padding: ($btn-padding-y) ($btn-padding-x);
+    background-color: rgba($gray-900,0.1);
+    display: inline-block;
+}
+
+// 
+// Button Extra Small Size
+// 
+
+.btn-xs {
+    padding: .2rem .6rem;
+    font-size: .75rem;
+    border-radius: .15rem;
+}

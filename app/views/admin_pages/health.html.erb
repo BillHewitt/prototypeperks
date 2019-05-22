@@ -1,0 +1,123 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <ol class="breadcrumb" style="margin-bottom: -10px;">
+                    <li class="breadcrumb-item"><a href="/admin/collections">Collections</a></li>
+                    <li class="breadcrumb-item active">Health & Support</li>
+                </ol>
+
+                
+
+                
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+
+                        <!-- Pricing Title-->
+                        <div class="text-center">
+                            <h3 class="mb-2 mt-3">Health & Support</h3>
+                            <p class="text-muted w-50 m-auto">
+                                The most connected health and support experience, so you have everything you need when it matters most.
+                            </p>
+                        </div>
+
+                        <!-- Plans -->
+                        <div class="row my-3 mt-4">
+                            <div class="col-md-4">
+                                <div class="card card-pricing">
+                                    <div class="card-body text-center">
+                                        <p class="card-pricing-plan-name font-weight-bold text-uppercase">Tier 1</p>
+                                       
+                                        <h2 class="card-pricing-price">£19 <span>/ Month</span></h2>
+                                        <ul class="card-pricing-features">
+                                            <li>Medical</li>
+                                            <li>Insurance</li>
+                                            <li>EAP</li>
+                                        </ul>
+                                        <button class="btn btn-light mt-4 mb-2 width-sm">Sign Up</button>
+                                    </div>
+                                </div> <!-- end Pricing_card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-4">
+                                <div class="card card-pricing">
+                                    <div class="card-body text-center">
+                                        <p class="card-pricing-plan-name font-weight-bold text-uppercase">Tier 2</p>
+                                        
+                                        <h2 class="card-pricing-price">£29 <span>/ Month</span></h2>
+                                        <ul class="card-pricing-features">
+                                            <li>Medical</li>
+                                            <li>Insurance</li>
+                                            <li>EAP</li>
+                                        </ul>
+                                        <button class="btn btn-light mt-4 mb-2 width-sm">Sign Up</button>
+                                    </div>
+                                </div> <!-- end Pricing_card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-4">
+                                <div class="card card-pricing">
+                                    <div class="card-body text-center">
+                                        <p class="card-pricing-plan-name font-weight-bold text-uppercase">Tier 3</p>
+                                        
+                                        <h2 class="card-pricing-price">£39 <span>/ Month</span></h2>
+                                        <ul class="card-pricing-features">
+                                            <li>Medical</li>
+                                            <li>Insurance</li>
+                                            <li>EAP</li>
+                                        </ul>
+                                        <button class="btn btn-light mt-4 mb-2 width-sm">Sign Up</button>
+                                    </div>
+                                </div> <!-- end Pricing_card -->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <ul class="social-list list-inline mt-2 mb-4 text-center">
+                            <p class="text-muted w-50 m-auto pb-3">
+                                Want to pick and choose your own experience?
+                            </p>
+                                <a href="/admin/health2" class="btn btn-light">View separate offers</a>
+                            </ul>
+
+                    </div> <!-- end col-->
+                </div>
+
+               
+                </div>     
+                <!-- end page title --> 
+
+                
+                
+            </div>
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+  
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>

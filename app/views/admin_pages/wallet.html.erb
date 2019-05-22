@@ -1,0 +1,220 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Wallet</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                
+                <div class="row">
+                    <div class="col-lg-8 col-xl-8">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="page-title-box">
+                                        <h4 class="header-title mb-3 mt-1">Credit History</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="page-title-box">
+                                        <a href="#" class="btn btn-light float-right mb-3">Download report</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>6/5/18</td>
+                                        <td>Earned Credit from card-linked</td>
+                                        <td class="text-muted">+50 Credits <span class="badge badge-light badge-pill">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1/5/18</td>
+                                        <td><a href="javascript: void(0);">Credit Reward</a> from Your Manager</td>
+                                        <td>+20 Credits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28/4/18</td>
+                                        <td><a href="javascript: void(0);">Credit Gift</a> from Your Manager</td>
+                                        <td>+90 Credits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26/4/18</td>
+                                        <td><a href="javascript: void(0);">Credit Reward</a> from Your Manager</td>
+                                        <td>+50 Credits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23/4/18</td>
+                                        <td>Purchased <a href="javascript: void(0);">Asos Giftcard</a></td>
+                                        <td>-50 Credits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21/2/18</td>
+                                        <td>Purchased credit</td>
+                                        <td>+10 Credits</td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4">
+                        <div class="card-box">
+
+                            <h4 class="mb-4 text-center ">Your Total Credit</h4>
+                            <h3 class="text-center mt-3 mb-4" ><a href="javascript: void(0);" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1" class="text-dark"><i class="fa fa-diamond" aria-hidden="true"></i> 300 <i class="mdi mdi-chevron-down"></i></a></h3>
+
+                            <div id="collapseOne1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" class="row">
+                                <div class="col-lg-12 col-xl-12 mb-2">
+                                    <button type="button" class="btn btn-link m-0 p-0 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne1" class="text-dark"><i class="mdi mdi-help-circle mr-1 text-primary" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i>  Any Collection <i class="mdi mdi-chevron-down small"></i></button>
+                                    <span class="float-right"> 100 <i class="fa fa-diamond mr-1" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i></span>
+                                </div>
+
+                                <div id="collapseOne" class="collapse small" aria-labelledby="headingOne" data-parent="#accordion" class="row">
+                                    <div class="col-lg-12 col-xl-12 mb-2">
+                                        <p class="text-muted ml-3">Rewarded <span class="float-right"> 70 <i class="fa fa-diamond mr-1" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                        <p class="text-muted ml-3">Purchased <span class="float-right"> 10 <i class="fa fa-diamond mr-1" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                        <p class="text-muted ml-3">Gifted <span class="float-right"> 10 <i class="fa fa-diamond mr-1" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                        <p class="text-muted ml-3">Earned Credit <span class="float-right"> 10 <i class="fa fa-diamond mr-1" title="These credits can be used in any collection" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                    </div>
+                                    
+                                </div>
+
+
+                                <div class="col-lg-12 col-xl-12 mb-2">
+                                    <button type="button" class="btn btn-link m-0 p-0 text-dark" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne1" class="text-dark"><i class="mdi mdi-help-circle mr-1 text-primary" title="These credits are limited to Everyday Offers" data-plugin="tippy" data-tippy-duration="0"></i>  Everyday Offers <i class="mdi mdi-chevron-down small"></i></button>
+                                    <span class="float-right"> 50 <i class="fa fa-diamond mr-1" title="These credits are limited to Everyday Offers" data-plugin="tippy" data-tippy-duration="0"></i></span>
+                                </div>
+
+                                <div id="collapseOne2" class="collapse small" aria-labelledby="headingOne" data-parent="#accordion" class="row">
+                                    <div class="col-lg-12 col-xl-12 mb-2">
+                                        <p class="text-muted ml-3">Gifted <span class="float-right"> 50 <i class="fa fa-diamond mr-1" title="These credits are limited to Everyday Offers" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-lg-12 col-xl-12 mb-2">
+                                    <button type="button" class="btn btn-link m-0 p-0 text-dark" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3" class="text-dark"><i class="mdi mdi-help-circle mr-1 text-primary" title="These credits credits are limited to Learning & Development" data-plugin="tippy" data-tippy-duration="0"></i>  Learning & Development <i class="mdi mdi-chevron-down small"></i></button>
+                                    <span class="float-right"> 100 <i class="fa fa-diamond mr-1" title="These credits credits are limited to Learning & Development" data-plugin="tippy" data-tippy-duration="0"></i></span>
+                                </div>
+
+                                <div id="collapseOne3" class="collapse small" aria-labelledby="headingOne" data-parent="#accordion" class="row">
+                                    <div class="col-lg-12 col-xl-12 mb-2">
+                                        <p class="text-muted ml-3">Gifted <span class="float-right"> 100 <i class="fa fa-diamond mr-1" title="These credits are limited to Everyday Offers" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-lg-12 col-xl-12 mb-2">
+                                    <button type="button" class="btn btn-link m-0 p-0 text-dark" data-toggle="collapse" data-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4" class="text-dark"><i class="mdi mdi-help-circle mr-1 text-primary" title="These credits are limited to Health & Support" data-plugin="tippy" data-tippy-duration="0"></i>  Health & Support <i class="mdi mdi-chevron-down small"></i></button>
+                                    <span class="float-right"> 50 <i class="fa fa-diamond mr-1" title="These credits are limited to Health & Support" data-plugin="tippy" data-tippy-duration="0"></i></span>
+                                </div>
+
+                                <div id="collapseOne4" class="collapse small" aria-labelledby="headingOne" data-parent="#accordion" class="row">
+                                    <div class="col-lg-12 col-xl-12 mb-2">
+                                        <p class="text-muted ml-3">Company benefit <span class="float-right"> 50 <i class="fa fa-diamond mr-1" title="These credits are limited to Everyday Offers" data-plugin="tippy" data-tippy-duration="0"></i></span></p>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                            
+
+                            <ul class="social-list list-inline mt-4 mb-0 text-center">
+                                <a href="/admin/credit" class="btn btn-light">Purchase Credit</a>
+                            </ul>
+                        </div>
+                    
+
+
+                        <div id="accordion" class="mb-3">
+                            <div class="card mb-1">
+                                <div class="card-header" id="headingOne" style="background-color: #fff";>
+                                    <h5 class="m-0">
+                                        <a class="text-dark collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
+                                            Where can I spend my Credit? <i class="mdi mdi-chevron-down float-right"></i>
+                                        </a>
+                                    </h5>
+                                </div>
+                    
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                                    <div class="card-body">
+                                        You can spend your Credit in the <a href="javascript: void(0);">collections</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-1">
+                                <div class="card-header" id="headingTwo" style="background-color: #fff";>
+                                    <h5 class="m-0">
+                                        <a class="text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
+                                            How can I earn more Credit? <i class="mdi mdi-chevron-down float-right"></i>
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>As a gift or reward for high achievement
+                                            </li>
+                                            <li>By <a href="/admin/profileedit#settings">linking your card</a> and earning back Credit from specific locations
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+
+
+
+<%= javascript_include_tag 'admin/libs/tippy-js/tippy.all.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>

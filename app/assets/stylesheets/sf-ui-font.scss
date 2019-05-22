@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'SFUIText-HeavyItalic';
+    src: font-url('sf-ui/SFUIText-HeavyItalic.eot');
+    src: font-url('sf-ui/SFUIText-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-HeavyItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-HeavyItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIText-MediumItalic';
+    src: font-url('sf-ui/SFUIText-MediumItalic.eot');
+    src: font-url('sf-ui/SFUIText-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-MediumItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-MediumItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIText-LightItalic';
+    src: font-url('sf-ui/SFUIText-LightItalic.eot');
+    src: font-url('sf-ui/SFUIText-LightItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-LightItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-LightItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-LightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Light';
+    src: font-url('sf-ui/SFUIDisplay-Light.eot');
+    src: font-url('sf-ui/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Light.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Light.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Regular';
+    src: font-url('sf-ui/SFUIDisplay-Regular.eot');
+    src: font-url('sf-ui/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Regular.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Regular.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Semibold';
+    src: font-url('sf-ui/SFUIText-Semibold.eot');
+    src: font-url('sf-ui/SFUIText-Semibold.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Semibold.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Semibold.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Heavy';
+    src: font-url('sf-ui/SFUIText-Heavy.eot');
+    src: font-url('sf-ui/SFUIText-Heavy.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Heavy.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Heavy.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Regular';
+    src: font-url('sf-ui/SFUIText-Regular.eot');
+    src: font-url('sf-ui/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Regular.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Regular.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Bold';
+    src: font-url('sf-ui/SFUIText-Bold.eot');
+    src: font-url('sf-ui/SFUIText-Bold.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Bold.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Bold.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-RegularItalic';
+    src: font-url('sf-ui/SFUIText-RegularItalic.eot');
+    src: font-url('sf-ui/SFUIText-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-RegularItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-RegularItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIText-BoldItalic';
+    src: font-url('sf-ui/SFUIText-BoldItalic.eot');
+    src: font-url('sf-ui/SFUIText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-BoldItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-BoldItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Medium';
+    src: font-url('sf-ui/SFUIDisplay-Medium.eot');
+    src: font-url('sf-ui/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Medium.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Medium.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Heavy';
+    src: font-url('sf-ui/SFUIDisplay-Heavy.eot');
+    src: font-url('sf-ui/SFUIDisplay-Heavy.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Heavy.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Heavy.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Black';
+    src: font-url('sf-ui/SFUIDisplay-Black.eot');
+    src: font-url('sf-ui/SFUIDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Black.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Black.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Ultralight';
+    src: font-url('sf-ui/SFUIDisplay-Ultralight.eot');
+    src: font-url('sf-ui/SFUIDisplay-Ultralight.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Ultralight.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Ultralight.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Light';
+    src: font-url('sf-ui/SFUIText-Light.eot');
+    src: font-url('sf-ui/SFUIText-Light.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Light.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Light.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-SemiboldItalic';
+    src: font-url('sf-ui/SFUIText-SemiboldItalic.eot');
+    src: font-url('sf-ui/SFUIText-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-SemiboldItalic.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-SemiboldItalic.woff') format('woff'),
+        font-url('sf-ui/SFUIText-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Thin';
+    src: font-url('sf-ui/SFUIDisplay-Thin.eot');
+    src: font-url('sf-ui/SFUIDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Thin.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Thin.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Semibold';
+    src: font-url('sf-ui/SFUIDisplay-Semibold.eot');
+    src: font-url('sf-ui/SFUIDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Semibold.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Semibold.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIText-Medium';
+    src: font-url('sf-ui/SFUIText-Medium.eot');
+    src: font-url('sf-ui/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIText-Medium.woff2') format('woff2'),
+        font-url('sf-ui/SFUIText-Medium.woff') format('woff'),
+        font-url('sf-ui/SFUIText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Bold';
+    src: font-url('sf-ui/SFUIDisplay-Bold.eot');
+    src: font-url('sf-ui/SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        font-url('sf-ui/SFUIDisplay-Bold.woff2') format('woff2'),
+        font-url('sf-ui/SFUIDisplay-Bold.woff') format('woff'),
+        font-url('sf-ui/SFUIDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

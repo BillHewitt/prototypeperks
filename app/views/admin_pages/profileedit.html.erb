@@ -1,0 +1,352 @@
+<%- content_for :head_css do %>
+  
+<%= stylesheet_link_tag 'admin/libs/jquery-nice-select/nice-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/switchery/switchery.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/multiselect/multi-select.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/select2/select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-select/bootstrap-select.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= stylesheet_link_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<div class="wrapper">
+            <div class="container">
+
+                <ol class="breadcrumb" style="margin-bottom: -10px;">
+                    <li class="breadcrumb-item"><a href="/admin/profile">Profile</a></li>
+                    <li class="breadcrumb-item active">Edit details</li>
+                </ol>
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box mt-0">
+                            <h4 class="page-title">Edit details</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    
+
+                    <div class="col-lg-12 col-xl-12">
+                        <div class="card-box">
+                            <ul class="nav nav-tabs nav-bordered">
+                                <li class="nav-item">
+                                    <a href="#aboutme1" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        Details
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#aboutme" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Notification preferences
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#timeline" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Interests & Values
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Cards
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="aboutme1">
+
+                                    <form role="form" class="parsley-examples" novalidate="">
+                                        <h5 class="mb-4 text-uppercase">Personal Info</h5>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">First Name<span class="text-danger">*</span></label>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control" id="firstname" value="Bill">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Last Name<span class="text-danger">*</span></label>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control" id="firstname" value="Hewitt">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Phone Number</label>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control" id="firstname" value="07777 777777">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Date of Birth</label>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control" id="firstname" value="22/10/45">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                           <label for="lastname" class="col-2 col-form-label">Gender</label>
+                                           <div class="col-4">
+                                                <select class="custom-select mb-2">
+                                                    <option selected="">Male</option>
+                                                    <option value="1">Female</option>
+                                                    <option value="2">Prefer not to say</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="lastname" class="col-2 col-form-label">Location<span class="text-danger">*</span></label>
+                                            <div class="col-4">
+                                                <select class="custom-select mb-2">
+                                                    <option selected="">UK</option>
+                                                    <option value="1">Country 1</option>
+                                                    <option value="2">Country 2</option>
+                                                    <option value="2">Country 3</option>
+                                                    <option value="2">Country 4</option>
+                                                    <option value="2">Country 5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="hori-pass1" class="col-2 col-form-label">Password<span class="text-danger">*</span></label>
+                                            <div class="col-4">
+                                                <input type="password" class="form-control" id="userpassword" value="********">
+                                                    <span class="form-text text-muted"><small>If you want to change password please <a href="javascript: void(0);">click</a> here.</small></span>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    
+
+                                        
+
+                                         <h5 class="mb-4 mt-4 text-uppercase">Company Info</h5>
+
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Email Address<span class="text-danger">*</span></label>
+                                            <div class="col-4">
+                                                <input type="text" class="form-control" id="firstname" value="bill.hewitt@perkbox.com">
+                                                <span class="form-text text-muted"><small>If you want to change password please <a href="javascript: void(0);">click</a> here.</small></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Teams</label>
+                                            <div class="col-4 mt-1">
+                                                <p>Product & Engineering, London, Marketing</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Job Role</label>
+                                            <div class="col-4 mt-1">
+                                                <p>Product Manager</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-2 col-form-label">Reports To</label>
+                                            <div class="col-4 mt-1">
+                                                <p>Paul Schulz</p>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-xl-6">
+                                        
+                                            <div class="text-right">
+                                                <button type="submit" class="btn btn-light mt-2">Cancel</button>
+                                                <button type="submit" class="btn btn-warning mt-2">Save</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+                                    
+
+                                </div> <!-- end tab-pane -->
+                                <!-- end about me section content -->
+
+                                <div class="tab-pane" id="aboutme">
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Notification Preferences</h5>
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-xl-12">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">Let me know about my rewards & recogntition</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">Let me know when I'm gifted something</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                <label class="custom-control-label" for="customCheck3">Let me know when my manager posts in The Hub</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                <label class="custom-control-label" for="customCheck4">Notification 4</label>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-6 col-xl-6">
+                                                
+                                                    <div class="text-right">
+                                                        <button type="submit" class="btn btn-light mt-2">Cancel</button>
+                                                        <button type="submit" class="btn btn-warning mt-2">Save</button>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                        </div>
+                                        </div> <!-- end col-->
+
+
+                                    </div>
+
+                                </div> <!-- end tab-pane -->
+                                <!-- end about me section content -->
+
+                                <div class="tab-pane" id="timeline">
+
+                                    <h5 class="mb-4 text-uppercase">
+                                        Interests</h5>
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-xl-12">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                <label class="custom-control-label" for="customCheck5">Sport</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                <label class="custom-control-label" for="customCheck6">Music</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                <label class="custom-control-label" for="customCheck7">Cooking</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                                <label class="custom-control-label" for="customCheck8">Design</label>
+                                            </div>
+                                            
+                                        </div> <!-- end col-->
+
+
+                                    </div>
+
+                                    <h5 class="mb-4 mt-4 text-uppercase">
+                                        Values</h5>
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-xl-12">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                                <label class="custom-control-label" for="customCheck9">Work-life balance</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                                <label class="custom-control-label" for="customCheck10">Teamwork</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                                <label class="custom-control-label" for="customCheck11">Manager Relationships</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                                <label class="custom-control-label" for="customCheck12">Communication</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                                <label class="custom-control-label" for="customCheck13">Learning & Development</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                                <label class="custom-control-label" for="customCheck14">Reward & Recognition</label>
+                                            </div>
+                                            
+
+                                             <div class="row">
+                                                <div class="col-lg-6 col-xl-6">
+                                                
+                                                    <div class="text-right">
+                                                        <button type="submit" class="btn btn-light mt-2">Cancel</button>
+                                                        <button type="submit" class="btn btn-warning mt-2">Save</button>
+                                                    </div>
+
+                                                </div>
+                                                
+                                        </div>
+                                        </div> <!-- end col-->
+
+
+                                    </div>
+
+                                </div>
+                                <!-- end timeline content-->
+
+                                <div class="tab-pane" id="settings">
+                                    <form>
+                                        <h5 class="mb-4 text-uppercase">
+</i> Cards</h5>
+                                        <div class="row">
+                                        
+
+                                       
+
+                                        <div class="col-md-6 col-xl-6">
+                                            <p>Make your money go further when you spend locally.</p>
+                                            <p>Link your bank card, pay full price and earn credit back every time you visit a <a href="/admin/everyday#settings">participating location</a></p>
+                                            <button type="submit" class="btn btn-light mt-2">Link your card</button>
+                                        </div> <!-- end col-->
+
+                                        </div>
+                                    </form>
+
+                                    
+
+                                </div>
+                                <!-- end settings content-->
+
+                            </div> <!-- end tab-content -->
+                        </div> <!-- end card-box-->
+
+                    </div> <!-- end col -->
+
+
+                </div>
+                <!-- end row-->
+                
+
+                        
+
+                    </div> <!-- end col-->
+                
+            </div> <!-- end container -->
+       </div><%- content_for :footer_js do %>
+  
+<%= javascript_include_tag 'admin/libs/jquery-nice-select/jquery.nice-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/switchery/switchery.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/multiselect/jquery.multi-select.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/select2/select2.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/jquery-mockjax/jquery.mockjax.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/autocomplete/jquery.autocomplete.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-select/bootstrap-select.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/libs/bootstrap-maxlength/bootstrap-maxlength.min.js', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'admin/js/pages/form-advanced.init.js', 'data-turbolinks-track': 'reload' %>
+<% end %>
