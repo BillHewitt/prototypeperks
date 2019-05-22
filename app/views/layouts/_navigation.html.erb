@@ -57,7 +57,7 @@
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="fe-bell noti-icon"></i>
-                    <span class="badge badge-primary rounded-circle noti-icon-badge">4</span>
+                    <span class="badge badge-primary rounded-circle noti-icon-badge">1</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-lg">
     
@@ -77,40 +77,10 @@
                         <!-- item-->
                         <a href="/admin/profile2" class="dropdown-item notify-item">
                             <div class="notify-icon">
-                                <img src="/template-assets/images/users/elsa.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                            <p class="notify-details">Recognition from Elsa Bacchiolelli</p>
+                                <img src="/template-assets/images/perkboxlogo.png" class="img-fluid rounded-circle" alt="" /> </div>
+                            <p class="notify-details">Recommended Lunchtime Treats</p>
                             <p class="text-muted mb-0 user-msg">
                                 <small>Just now</small>
-                            </p>
-                        </a>
-    
-                        <!-- item-->
-                        <a href="/admin/profile2" class="dropdown-item notify-item">
-                            <div class="notify-icon">
-                                <img src="/template-assets/images/users/paul.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                            <p class="notify-details">Shoutout from Paul Schulz</p>
-                            <p class="text-muted mb-0 user-msg">
-                                <small>10 minutes ago</small>
-                            </p>
-                        </a>
-
-                        <!-- item-->
-                        <a href="/admin/profile3" class="dropdown-item notify-item">
-                            <div class="notify-icon">
-                                <img src="/template-assets/images/users/paul.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                            <p class="notify-details">Reward from Paul Schulz</p>
-                            <p class="text-muted mb-0 user-msg">
-                                <small>1 day ago</small>
-                            </p>
-                        </a>
-
-                        <!-- item-->
-                        <a href="/admin/hub" class="dropdown-item notify-item">
-                            <div class="notify-icon">
-                                <img src="/template-assets/images/users/paul.jpg" class="img-fluid rounded-circle" alt="" /> </div>
-                            <p class="notify-details">Team action from Paul Schulz</p>
-                            <p class="text-muted mb-0 user-msg">
-                                <small>3 days ago</small>
                             </p>
                         </a>
                     </div>
@@ -155,17 +125,6 @@
                     </a>
 
                      <!-- item-->
-                    <a href="/admin/profile2" class="dropdown-item notify-item">
-                        <i class="fe-thumbs-up"></i>
-                        <span class="ml-1">Your Recognition</span>
-                    </a>
-    
-                    <!-- item-->
-                    <a href="/admin/profile3" class="dropdown-item notify-item">
-                        <i  class="fe-award"></i>
-                        <span class="ml-1">Your Rewards</span>
-                    </a>
-    
                     <div class="dropdown-divider"></div>
     
                     <!-- item-->
@@ -205,20 +164,7 @@
                 <% if current_page?(admin_path(page: 'hub')) %>
 
 
-                <li class="dropdown d-none d-lg-block">
-                    <a class="nav-link active" href="/admin/hub" role="button" aria-haspopup="false" aria-expanded="false">
-                        The Hub
-                    </a>
-                </li>
-
-                <% else %>
-
-                <li class="dropdown d-none d-lg-block">
-                    <a class="nav-link" href="/admin/hub" role="button" aria-haspopup="false" aria-expanded="false">
-                        The Hub
-                    </a>
-                </li>
-
+               
                 <% end %>
 
                 <% if current_pages?(%w(gifted holiday medical starts asosr creditr)) %>
@@ -262,16 +208,7 @@
                             
                             <div class="row">
 
-                                <div class="col-md-3">
-                                    <h5 class="text-dark mt-0">Company Extras</h5>
-                                    <ul class="list-unstyled megamenu-list">
-                                        <li>
-                                            <a href="/admin/company">View All</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <h5 class="text-dark mt-0">Everyday Offers</h5>
                                     <ul class="list-unstyled megamenu-list">
                                         <li>
@@ -289,7 +226,7 @@
                                     </ul>
                                 </div>
     
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <h5 class="text-dark mt-0">Learning & Development</h5>
                                     <ul class="list-unstyled megamenu-list">
                                         <li>
@@ -310,7 +247,7 @@
                                     </ul>
                                 </div>
     
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <h5 class="text-dark mt-0">Health & Support</h5>
                                     <ul class="list-unstyled megamenu-list">
                                         <li>
@@ -351,11 +288,7 @@
             <!-- Navigation Menu-->
             <ul class="navigation-menu">
 
-                <li class="">
-                    <a href="#">
-                        The Hub
-                    </a>
-                </li>
+                
 
                 <li class="">
                     <a href="#">
